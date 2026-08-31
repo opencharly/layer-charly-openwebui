@@ -1,7 +1,7 @@
 version: 2026.232.0520
 charly-openwebui:
     candy:
-        version: 2026.218.1200
+        version: 2026.243.0909
         description: |-
             Metadata concept candy owning the charly-openwebui skills whose names have no namesake candy (openwebui chat-frontend image). Owns its family's `skill:` kind entities (sibling nodes in this file) — the
             the plugins→candies migration; candy/plugin-marketplace regenerates the marketplace
@@ -159,7 +159,7 @@ openwebui-layer-skill:
               candy:
                 - agent-forwarding
                 - openwebui
-                - '@github.com/opencharly/pod-dbus:v2026.235.2115'
+                - '@github.com/opencharly/pod-dbus:vTAG'
                 - charly
               ports:
                 - "8080:8080"
