@@ -1,7 +1,5 @@
-version: 2026.232.0520
 charly-openwebui:
     candy:
-        version: 2026.243.0909
         description: |-
             Metadata concept candy owning the charly-openwebui skills whose names have no namesake candy (openwebui chat-frontend image). Owns its family's `skill:` kind entities (sibling nodes in this file) — the
             the plugins→candies migration; candy/plugin-marketplace regenerates the marketplace
