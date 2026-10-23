@@ -1,63 +1,34 @@
-# charly-openwebui
+# charly-openwebui — retired
 
-The `charly-openwebui` family — the owning skill for the Open WebUI chat-frontend
-layer.
+> **RETIRED — this repo publishes nothing.** Its one `openwebui`-family skill lives in the
+> repo that holds the code, plugin or config it documents (the table below). Nothing is
+> authored, built, deployed or consumed here: a change to it is a change at its destination
+> repo, in the same pull request as the entity it documents.
 
-The `charly-openwebui` candy is a **concept candy**: it ships no install content
-and owns the `openwebui` family's `skill:` entity whose name has no namesake
-candy — the `openwebui-layer` skill. It documents the Open WebUI service: port
-8080, the `data` volume, the auto-configuration entrypoint (LLM provider
-detection, MCP server discovery, Jupyter code execution), the two-tier secrets
-architecture, and the `ENABLE_PERSISTENT_CONFIG=false` design choice.
+**This repo no longer authors a skill.** It was the `charly-openwebui` concept candy: a `true`-no-op `plan:` and one `skill:` entity, with the prose in `.agents/skills/`.
+Under `AGENTS.md` Part II #5 a skill lives in the repo whose code,
+plugin or config it describes — and this repo holds none of it (measured before the
+change: **0 `.go`, 0 `.cue`, no `candy/` directory**) — so it moved, byte-identically,
+to the repo that does:
 
-The image / box skill of the same family is owned by
-`opencharly/box-openwebui` (`/charly-openwebui:openwebui`).
-`candy/plugin-marketplace` regenerates the standalone
-[opencharly/marketplace](https://github.com/opencharly/marketplace) corpus from
-these entities, so the skill is authored here and projected there.
+| Skill | Now authored in | The entity that owns it |
+|---|---|---|
+| `openwebui-layer` | [`opencharly/pod-openwebui`](https://github.com/opencharly/pod-openwebui) | the `openwebui` candy it documents |
 
-## What it provides
+**The addresses did not change.** Every skill keeps its `openwebui` family at its
+destination node, so `/charly-openwebui:<skill>` still resolve — they are simply authored
+where the entity is implemented. The move is the rule `AGENTS.md` Part II #5 states, tracked
+in [opencharly/opencharly#600](https://github.com/opencharly/opencharly/issues/600).
+
+## What remains here
 
 | Property | Value |
 |---|---|
-| Layer / candy | `charly-openwebui` (concept candy) |
+| Layer / candy | `charly-openwebui` (drained concept candy) |
 | Install content | none — a `true` no-op `plan:` |
-| Owns | 1 `skill:` entity: `openwebui-layer` |
-| Projected to | `marketplace/openwebui/skills/` |
-| Service / port | none (the `openwebui-layer` skill documents port 8080) |
+| Owns | nothing — 0 `skill:` entities |
+| Service / port | none |
 
-## How to use it
-
-This repo is consumed as a **skill source**, not as an image layer. Edit the
-`skill:` entity in `charly.yml`; the marketplace regeneration projects it into
-the `/charly-openwebui:openwebui-layer` page. To reference the repo directly,
-compose it in a box. A box is a `candy:` node carrying the box's `base:` image
-and a nested `candy:` list of layer refs (the nested `candy:` is the composition
-list; the outer `candy:` is the box body):
-
-```yaml
-my-box:
-  candy:                  # the box body (an IMAGE is a `candy:` node carrying `base:`)
-    base: fedora          # the box's base image
-    candy:                # the box's composition list
-      - '@github.com/opencharly/layer-charly-openwebui:v2026.243.2107'
-```
-
-The Open WebUI service itself is installed by the `openwebui` image candy, not
-by this concept candy — this repo only carries the projected skill.
-
-## Layout
-
-- `charly.yml` — the `charly-openwebui:` concept candy entity plus the
-  `openwebui-layer-skill:` entity.
-- `.github/workflows/tag-on-merge.yml` — CalVer tag + `CHANGELOG/` on merge.
-- `README.md` — this user overview.
-
-## Related
-
-- Owning skill: `/charly-openwebui:openwebui-layer`
-- Image / box skill: `/charly-openwebui:openwebui`
-- Authoring reference: `/charly-image:layer`
-- [`opencharly/marketplace`](https://github.com/opencharly/marketplace) — the projected corpus
-- [`opencharly/charly`](https://github.com/opencharly/charly) — the charly CLI and image builder
-- [`opencharly/opencharly`](https://github.com/opencharly/opencharly) — the umbrella
+Do not compose, reference or edit this repo: the skills, their routing nodes and their
+prose all live at the destinations above, and this repo's retirement is tracked in
+[opencharly/opencharly#600](https://github.com/opencharly/opencharly/issues/600).
